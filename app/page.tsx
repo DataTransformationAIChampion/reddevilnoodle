@@ -331,7 +331,7 @@ export default function Home() {
           Red Devil Noodle – ก๋วยเตี๋ยวปีศาจแดง
         </p>
         <p className="mt-1">กินอิ่ม เชียร์มันส์ Glory Glory! ⚽</p>
-        <p className="mt-3">© {new Date().getFullYear()} Red Devil Noodle</p>
+        <p className="mt-3">© 2026 Red Devil Noodle</p>
       </footer>
 
       {/* ปุ่มลอยบนมือถือ */}
