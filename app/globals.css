@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+/* ==== สีและตัวอักษรของทั้งเว็บ (แก้ที่นี่ที่เดียว) ==== */
+@theme {
+  /* สีหลักของแบรนด์ */
+  --color-devil: #da291c;
+  --color-devil-dark: #a81f14;
+  --color-devil-soft: #ffe4e0;
+  --color-gold: #fbe122;
+  --color-ink: #120c0b;
+  --color-coal: #1e1514;
+  --color-ash: #3a2c2a;
+  --color-cream: #fff7ee;
+  --color-muted: #c9b8b4;
+  --color-line: #06c755;
+
+  /* ฟอนต์ (มาจาก next/font ใน layout.tsx) */
+  --font-sans: var(--font-body), system-ui, sans-serif;
+  --font-display: var(--font-head), var(--font-body), sans-serif;
+
+  /* ขนาดตัวอักษร */
+  --text-display: clamp(2.5rem, 9vw, 4.75rem);
+  --text-display--line-height: 1.1;
+  --text-h2: clamp(1.75rem, 5.5vw, 2.75rem);
+  --text-h2--line-height: 1.2;
+  --text-h3: 1.375rem;
+  --text-h3--line-height: 1.35;
+  --text-lead: clamp(1.0625rem, 2.6vw, 1.25rem);
+  --text-lead--line-height: 1.7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-cream);
+  font-family: var(--font-sans);
+  line-height: 1.7;
+}
+
+/* ลายเส้นสนามฟุตบอลจาง ๆ เป็นพื้นหลัง */
+.pitch-lines {
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 79px,
+      rgb(255 255 255 / 0.04) 79px 80px
+    ),
+    radial-gradient(circle at 50% 50%, rgb(218 41 28 / 0.35), transparent 60%);
+}
+
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details[open] .faq-icon {
+  transform: rotate(45deg);
+}
